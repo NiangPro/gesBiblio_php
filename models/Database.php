@@ -11,6 +11,19 @@ class Database {
             die("Erreur :".$th->getMessage());
         }
     }
+
+    public function login($code, $mdp)
+    {
+        try {
+            $q = $this->db->prepare("SELECT * FROM user WHERE (code =? AND  mdp =?)");
+
+            $q->execute([$code,$mdp]);
+        } catch (\Throwable $th) {
+            die("Erreur :".$th->getMessage());
+        }
+    
+        return $q->fetch();
+    }
 }
 
 ?>
