@@ -11,11 +11,11 @@
         if($user){
             if ($user->type == "employe") {
             
-                return header("Location:?page=admin");
+                return header("Location:?page=employe");
             }else if ($user->type == "admin") {
-                die("Bienvenu l'admin");
+                return header("Location:?page=admin");
             }else{
-                die("Bienvenu le membre");
+                return header("Location:?page=membre");
             }
         }else{
             echo "Code ou mot de passe incorrect";

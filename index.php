@@ -9,7 +9,12 @@ if (isset($_GET['page'])) {
         case 'admin':
             require_once("Controllers/adminControlleur.php");
             break;
-        
+            case 'employe':
+                require_once("Controllers/employeControlleur.php");
+                break;
+                case 'membre':
+                    require_once("Controllers/membreControlleur.php");
+                    break;
         default:
             # code...
             break;
