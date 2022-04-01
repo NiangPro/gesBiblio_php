@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet Gestion Bibliotheque</title>
-</head>
-<body>
-    
-</body>
-</html>
+<?php 
+
+require_once('models/Database.php');
+$db = new Database();
+
+require_once('partials/_header.php'); 
+if (isset($_GET['page'])) {
+    # code...
+}else{
+    require_once('Controllers/loginControlleur.php');
+}
+
+ require_once('partials/_footer.php'); 
